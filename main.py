@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List
 import pandas as pd
-from .get_data import stock_wide_format, stock_long_format
+from get_data import stock_wide_format, stock_long_format
 from fastapi.middleware.cors import CORSMiddleware
 
 
