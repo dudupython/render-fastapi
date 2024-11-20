@@ -169,14 +169,14 @@ class DataLoaderCAFE(DataLoadProto):
         return stock_data
 
 def stock_wide_format(symbols=['VIC', 'VPB', 'BSC']):
-    loader2 = DataLoaderCAFE(symbols=symbols, start="2024-10-10", end=datetime.today().strftime("%Y-%m-%d"))
+    loader2 = DataLoaderCAFE(symbols=symbols, start="2024-09-10", end=datetime.today().strftime("%Y-%m-%d"))
     stock_price = loader2.download() 
     stock_price = stock_price[['adjust_price']]
     stock_price.columns = stock_price.columns.droplevel(0)
     return stock_price
 
 def stock_long_format(symbols=['VIC', 'VPB', 'BSC']):
-    loader2 = DataLoaderCAFE(symbols=symbols, start="2024-10-10", end=datetime.today().strftime("%Y-%m-%d"))
+    loader2 = DataLoaderCAFE(symbols=symbols, start="2024-09-10", end=datetime.today().strftime("%Y-%m-%d"))
     stock_price = loader2.download() 
     stock_price = stock_price[['adjust_price']]
     stock_price.columns = stock_price.columns.droplevel(0)
